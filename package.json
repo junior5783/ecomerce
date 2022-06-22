@@ -1,0 +1,24 @@
+{
+  "name": "ecomerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "application.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon application.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junior5783/ecomerce.git"
+  },
+  "author": "Junior Sanchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/junior5783/ecomerce/issues"
+  },
+  "homepage": "https://github.com/junior5783/ecomerce#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-validator": "^6.14.1"
+  }
+}
