@@ -13,12 +13,16 @@ const isAdminUserMiddleware = (req,res,next) => {
     }
     next();
 };
+const routeNotFound = (req, res, next) => {
+    return res.status(404).json({error: -2, ruta: req.url, metodo: req.method});
+}
 
 app.use(isAdminUserMiddleware);
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use('/api/productos', productsRouter);
 app.use('/api/carrito', shoppingCarRouter);
+app.use(routeNotFound);
 
 app.listen(PORT, () => console.log(`Listen on port ${PORT}`));
 app.on('error', error => console.log(`There was an error on the application : ${error}`));
